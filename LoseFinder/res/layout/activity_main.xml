@@ -1,0 +1,68 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.com.cml.losefinder.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <cn.com.cml.losefinder.ScrollTextView
+            android:id="@+id/lll"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="updateText"
+            android:text="dddd" />
+
+        <ListView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="600dp" >
+        </ListView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addContact"
+            android:text="添加联系人到朋友组" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="download"
+            android:text="下载文件" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startLocationMonitor"
+            android:text="定位我哦" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFence"
+            android:text="启动范围搜索" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startRadarSearch"
+            android:text="启动雷达搜索" />
+
+        <ImageView
+            android:id="@+id/cropWindow"
+            android:layout_width="match_parent"
+            android:layout_height="500dp" />
+    </LinearLayout>
+
+</ScrollView>
